@@ -449,9 +449,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ef46f4650e9b349a9d6febeeba238a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 751071992}
-  urlLeft: https://picsum.photos/seed/
-  urlRight: /200/300
+  _card: {fileID: 751071992}
+  _urlLeft: https://picsum.photos/seed/
+  _urlRight: /200/300
 --- !u!212 &225745527
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -873,9 +873,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ef46f4650e9b349a9d6febeeba238a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 26064719}
-  urlLeft: https://picsum.photos/seed/
-  urlRight: /200/300
+  _card: {fileID: 26064719}
+  _urlLeft: https://picsum.photos/seed/
+  _urlRight: /200/300
 --- !u!212 &372196181
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1410,9 +1410,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ef46f4650e9b349a9d6febeeba238a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 905844866}
-  urlLeft: https://picsum.photos/seed/
-  urlRight: /200/300
+  _card: {fileID: 905844866}
+  _urlLeft: https://picsum.photos/seed/
+  _urlRight: /200/300
 --- !u!1 &839943869
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,9 +2475,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ef46f4650e9b349a9d6febeeba238a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 1643280662}
-  urlLeft: https://picsum.photos/seed/
-  urlRight: /200/300
+  _card: {fileID: 1643280662}
+  _urlLeft: https://picsum.photos/seed/
+  _urlRight: /200/300
 --- !u!212 &1515148282
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2730,9 +2730,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ef46f4650e9b349a9d6febeeba238a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 839943870}
-  urlLeft: https://picsum.photos/seed/
-  urlRight: /200/300
+  _card: {fileID: 839943870}
+  _urlLeft: https://picsum.photos/seed/
+  _urlRight: /200/300
 --- !u!212 &1876507428
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2841,13 +2841,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717ef87238bf31b4eb2d37d788263c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cards:
+  _cards:
   - {fileID: 812286678}
   - {fileID: 372196180}
   - {fileID: 1876507427}
   - {fileID: 225745526}
   - {fileID: 1515148281}
-  CardsTransform:
+  _cardsTransform:
   - {fileID: 905844866}
   - {fileID: 26064719}
   - {fileID: 839943870}
