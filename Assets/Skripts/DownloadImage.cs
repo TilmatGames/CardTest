@@ -9,15 +9,15 @@ using Random = UnityEngine.Random;
 
 public class DownloadImage : MonoBehaviour
 {
-    [SerializeField] private Transform card;
+    [SerializeField] private Transform _card;
 
-    [SerializeField] private string urlLeft, urlRight;
+    [SerializeField] private string _urlLeft, _urlRight;
 
     public void DownloadPhoto()
     {
 
         int rnd = Random.Range(0, 45);
-        GetTexture(urlLeft + rnd + urlRight, (string error) =>
+        GetTexture(_urlLeft + rnd + _urlRight, (string error) =>
          {
              Debug.Log("error");
          }, (Texture2D texture2d) =>
@@ -31,9 +31,9 @@ public class DownloadImage : MonoBehaviour
     }
     public void DownloadPhotoOnReady()
     {
-        card.DORotate(new Vector2(0, 180), 0.3f, RotateMode.Fast);
-        int rnd = Random.Range(0, 15);
-        GetTexture(urlLeft + rnd + urlRight, (string error) =>
+        _card.DORotate(new Vector2(0, 180), 0.3f, RotateMode.Fast);
+        int rnd = Random.Range(0, 45);
+        GetTexture(_urlLeft + rnd + _urlRight, (string error) =>
         {
             Debug.Log("error");
         }, (Texture2D texture2d) =>
@@ -41,7 +41,7 @@ public class DownloadImage : MonoBehaviour
             Sprite sprite = Sprite.Create(texture2d, new Rect(0, 0, texture2d.width, texture2d.height), new Vector2(.5f, .6f), 135);
             gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
 
-            card.DORotate(new Vector2(0, 0), 0.3f, RotateMode.Fast);
+            _card.DORotate(new Vector2(0, 0), 0.3f, RotateMode.Fast);
         });
 
     }

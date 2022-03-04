@@ -4,8 +4,8 @@ using UnityEngine;
 using DG.Tweening;
 public class LoadImageOnUI : MonoBehaviour
 {
-    [SerializeField] private DownloadImage[] Cards;
-    [SerializeField] private Transform[] CardsTransform;
+    [SerializeField] private DownloadImage[] _cards;
+    [SerializeField] private Transform[] _cardsTransform;
 
     public void loadImageOnUI()
     {
@@ -33,12 +33,12 @@ public class LoadImageOnUI : MonoBehaviour
         var seq = DOTween.Sequence();
         seq.AppendInterval(1f);
 
-        foreach (var cardTR in CardsTransform)
+        foreach (var cardTR in _cardsTransform)
             seq.Join(cardTR.DORotate(new Vector2(0, 180), 0.3f, RotateMode.Fast));
         seq.InsertCallback(0f, Complete);
         seq.AppendInterval(1f);
 
-        foreach (var cardTR in CardsTransform)
+        foreach (var cardTR in _cardsTransform)
         {
 
             seq.Join(cardTR.DORotate(new Vector2(0, 0), 0.3f, RotateMode.Fast));
@@ -48,7 +48,7 @@ public class LoadImageOnUI : MonoBehaviour
     }
     private void Complete()
     {
-        foreach (var card in Cards)
+        foreach (var card in _cards)
             card.DownloadPhoto();
     }
 
@@ -56,12 +56,12 @@ public class LoadImageOnUI : MonoBehaviour
     {
 
         var seq = DOTween.Sequence();
-        foreach (var cardTR in CardsTransform)
+        foreach (var cardTR in _cardsTransform)
             cardTR.DORotate(new Vector2(0, 180), 0.3f, RotateMode.Fast);
-        foreach (var card in Cards)
+        foreach (var card in _cards)
             card.DownloadPhoto();
         seq.AppendInterval(1f);
-        foreach (var cardTR in CardsTransform)
+        foreach (var cardTR in _cardsTransform)
         {
 
             seq.Append(cardTR.DORotate(new Vector2(0, 0), 0.3f, RotateMode.Fast));
@@ -72,7 +72,7 @@ public class LoadImageOnUI : MonoBehaviour
 
     private void WhenImageReady()
     {
-        foreach (var card in Cards)
+        foreach (var card in _cards)
             card.DownloadPhotoOnReady();
 
     }
